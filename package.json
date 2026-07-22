@@ -1,0 +1,33 @@
+{
+  "name": "deskwidget",
+  "productName": "DeskWidget",
+  "version": "1.0.0",
+  "description": "내 투명 이미지를 바탕화면 위젯으로",
+  "main": "main.js",
+  "author": "tinkerer0",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinkerer0/DeskWidget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tinkerer0/DeskWidget/issues"
+  },
+  "homepage": "https://github.com/tinkerer0/DeskWidget#readme",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "check": "node scripts/check-syntax.js",
+    "test": "npm run check && node --test",
+    "package:verify": "node scripts/package.js --verify-only",
+    "package:win": "npm test && node scripts/package.js --platform=win32 --arch=x64",
+    "release:win": "npm test && node scripts/assemble-release.js"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.0.3",
+    "electron": "43.2.0"
+  }
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'" />
+<meta name="referrer" content="no-referrer" />
+<title>DeskWidget 사용 설명서</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.25rem 4rem;
+    font-family: "Malgun Gothic", "Segoe UI", -apple-system, sans-serif;
+    line-height: 1.6;
+    background: #f6f5f2;
+    color: #24211c;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
+  .subtitle { color: #6b6459; margin: 0 0 2rem; }
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .step {
+    background: #fffdf9;
+    border: 1px solid #e4ddcf;
+    border-radius: 14px;
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+  .step .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background: #2f6f4f;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: .75rem;
+  }
+  .step h2 { font-size: 1.05rem; margin: 0 0 .35rem; }
+  .step p { margin: 0; color: #47423a; font-size: .95rem; }
+  .step code {
+    background: #efe9dc;
+    border-radius: 6px;
+    padding: .1rem .35rem;
+    font-size: .9em;
+  }
+  section { margin-bottom: 2rem; }
+  h3 {
+    font-size: 1rem;
+    margin: 0 0 .75rem;
+    padding-bottom: .4rem;
+    border-bottom: 2px solid #e4ddcf;
+  }
+  ul { margin: 0; padding-left: 1.2rem; }
+  li { margin-bottom: .5rem; font-size: .95rem; }
+  li:last-child { margin-bottom: 0; }
+  .note {
+    background: #fdf6e3;
+    border: 1px solid #eadfb4;
+    border-radius: 10px;
+    padding: .9rem 1.1rem;
+    font-size: .92rem;
+    color: #4a3f1a;
+  }
+  footer { color: #948d7f; font-size: .82rem; text-align: center; margin-top: 3rem; }
+
+  @media (prefers-color-scheme: dark) {
+    body { background: #17140f; color: #ece6d8; }
+    .step { background: #201c15; border-color: #3a3428; }
+    .step p { color: #cfc7b4; }
+    .step code { background: #332e22; }
+    h3 { border-bottom-color: #3a3428; }
+    .note { background: #2a2313; border-color: #4d4022; color: #e9d9a0; }
+    footer { color: #8a8371; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>DeskWidget 사용 설명서</h1>
+  <p class="subtitle">안 읽어도 쓸 수 있게 만들었습니다. 급하면 아래 두 단계만 하고 넘어가세요.</p>
+
+  <div class="steps">
+    <div class="step">
+      <span class="num">1</span>
+      <h2>사진 넣기</h2>
+      <p><code>사진을 넣으면 위젯이 됩니다</code> 폴더에 원하는 사진(PNG·JPG·WebP·GIF)을 넣습니다.</p>
+    </div>
+    <div class="step">
+      <span class="num">2</span>
+      <h2>실행하기</h2>
+      <p><code>DeskWidget 실행.exe</code>를 더블클릭합니다.</p>
+    </div>
+  </div>
+
+  <section>
+    <h3>위젯 다루기</h3>
+    <ul>
+      <li><strong>이동(드래그)</strong>: 위젯을 마우스 왼쪽 버튼으로 누른 채 끌면(드래그하면) 옮겨집니다.</li>
+      <li><strong>크기 조절</strong>: 마우스 커서를 위젯 위에 올린 상태에서 휠을 위로 굴리면 커지고 아래로 굴리면 작아집니다. 위젯을 먼저 클릭할 필요는 없으며, 바탕화면 빈 곳에서 굴린 휠에는 반응하지 않습니다.</li>
+      <li><strong>메뉴</strong>: 위젯을 오른쪽 클릭하면 크기 초기화, 위젯끼리 앞뒤 순서 바꾸기, 숨기기, 폴더 열기, 새로고침, 전체 종료를 고를 수 있습니다.</li>
+      <li><strong>종료</strong>: 화면 오른쪽 아래 트레이 아이콘을 오른쪽 클릭해 <code>종료</code>를 누르거나, 단축키 <code>Ctrl+Alt+Q</code>를 씁니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>알아두면 좋은 것</h3>
+    <ul>
+      <li><strong>자동 시작</strong>: 컴퓨터 켤 때 같이 켜지는 기능은 기본적으로 꺼져 있습니다. 트레이 메뉴에서 <code>부팅 시 시작</code>을 직접 켜야 동작합니다.</li>
+      <li><strong>지원 형식</strong>: PNG, JPG(JPEG), WebP, GIF만 위젯으로 만들 수 있습니다.</li>
+      <li><strong>개수 제한</strong>: 폴더 안 사진은 한 번에 최대 100개까지만 위젯으로 표시됩니다.</li>
+      <li><strong>로컬 처리</strong>: 인터넷으로 사진을 전송하거나 외부 서버와 통신하지 않습니다. 모든 처리는 이 컴퓨터 안에서만 이뤄집니다.</li>
+      <li><strong>설정 저장 위치</strong>: 위젯 위치·크기·순서 같은 설정은 <code>%APPDATA%\DeskWidget</code> 폴더에 저장됩니다. 이 폴더가 OneDrive 등으로 다른 PC와 동기화되도록 설정돼 있다면, 설정도 같이 동기화될 수 있습니다.</li>
+      <li><strong>PowerShell 사용</strong>: 위젯을 바탕화면 맨 뒤로 배치하거나 자동 시작을 켜고 끌 때, 이 컴퓨터에 이미 있는 PowerShell을 로컬에서만 짧게 실행합니다. 인터넷에 접속하거나 외부로 무언가를 보내지 않습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="note">사진과 설정은 전부 이 컴퓨터 안에만 남습니다. 지우고 싶으면 압축 풀었던 폴더를 통째로 삭제하면 됩니다. 설정 기록까지 지우려면 <code>%APPDATA%\DeskWidget</code> 폴더를 추가로 삭제하세요.</p>
+  </section>
+
+  <footer>DeskWidget — 이 문서는 인터넷 연결이나 별도 프로그램 없이 이 파일 하나로 전부 표시됩니다.</footer>
+</main>
+</body>
+</html>

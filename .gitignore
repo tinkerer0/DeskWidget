@@ -1,0 +1,21 @@
+node_modules/
+dist/
+out/
+coverage/
+*.log
+.DS_Store
+
+# 로컬 환경·코드서명 비밀값 — 저장소와 패키지에 포함하지 않는다.
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.key
+*.pem
+
+# 사용자가 위젯으로 띄우는 이미지들(런타임 생성 폴더) — 소스 아님
+사진을 넣으면 위젯이 됩니다/
+
+# Electron 바이너리를 포함한 배포 산출물(용량 큼, 릴리스로만 배포)
+*.zip
