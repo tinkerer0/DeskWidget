@@ -27,7 +27,7 @@
     "release:win": "npm test && node scripts/assemble-release.js"
   },
   "devDependencies": {
-    "@electron/packager": "20.0.3",
+    "@electron/packager": "20.2.0",
     "electron": "43.2.0"
   }
 }
